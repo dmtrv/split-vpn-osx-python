@@ -5,7 +5,7 @@ This script modifying routing table for split tunneling.
 ## Installation
 
 ```Terminal
-$ git clone https://github.com/davochka/
+$ git clone https://github.com/davochka/split-vpn-osx-python.git
 $ cd split-vpn-osx-python
 $ sudo install -c -m 0755 ip-up.py /etc/ppp/ip-up
 $ sudo install -c -m 0666 ip-up.json /etc/ppp/ip-up.json
