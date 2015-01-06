@@ -4,7 +4,7 @@ This script modifying routing table for split tunneling.
 
 ## Installation
 
-```Terminal
+```
 $ git clone https://github.com/davochka/split-vpn-osx-python.git
 $ cd split-vpn-osx-python
 $ sudo install -c -m 0755 ip-up.py /etc/ppp/ip-up
@@ -13,13 +13,13 @@ $ touch /tmp/ip-up-vpn.log
 ```
 ## Configuration
 
-Uncheck "Send all traffic over VPN connection" checkbox  in the OS X VPN settings!
+Uncheck **Send all traffic over VPN connection** checkbox  in the OS X VPN settings!
 
-Open and edit /etc/ip-up.json with your favorite editor.  You need to find out the subnet of the IPs in your VPN you need access to and a local IP.
+Open and edit `/etc/ip-up.json` with your favorite editor.  You need to find out the subnet of the IPs in your VPN you need access to and a local IP.
 
 ip-up.json config example which has two sections for two different VPNs:
 
-``` 
+```
 { "VPN": {
     "192.168.3.3": [
         "192.168.3",
@@ -38,4 +38,4 @@ To reset the routing table back disconnect from the VPN.
 
 ## Troubleshooting
 
-Check the log ```/tmp/ip-up-vpn.log```
+Check the log `/tmp/ip-up-vpn.log`
