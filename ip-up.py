@@ -62,7 +62,6 @@ def get_params():
     if len(sys.argv) < 6:
         logging.critical("Not enough command line arguments")
         print("This script should be called from the system request. ")
-        print("")
         sys.exit(1)
 
     logging.info("The interface name used by pppd %s" % str(sys.argv[1]))
@@ -78,7 +77,7 @@ if __name__ == '__main__':
     logging.info('Script started')
 
     intf, local_ip, remote_ip = get_params()
-    data = (load_route())
+    data = load_route()
 
     if remote_ip not in data['VPN']:
         logging.info("Could not find routes for %s, nothing to do" % remote_ip)
