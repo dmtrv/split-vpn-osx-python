@@ -1,10 +1,10 @@
 # Split VPN Routing script for OS X
 
-This script modifying routing table for split tunneling.
+This script modifying routing table for split tunneling. Only for default OS X VPN client. 
 
 ## Installation
 
-```
+```sh
 $ git clone https://github.com/davochka/split-vpn-osx-python.git
 $ cd split-vpn-osx-python
 $ sudo install -c -m 0755 ip-up.py /etc/ppp/ip-up
@@ -19,7 +19,7 @@ Open and edit `/etc/ip-up.json` with your favorite editor.  You need to find out
 
 ip-up.json config example which has two sections for two different VPNs:
 
-```
+```json
 { "VPN": {
     "192.168.3.3": [
         "192.168.3",
